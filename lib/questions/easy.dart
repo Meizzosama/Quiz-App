@@ -99,19 +99,19 @@ class _EasyQuizScreenState extends State<EasyQuizScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Easy Quiz'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.black12,
         centerTitle: true,
       ),
       body:
       Container(
-      width: double.infinity,
-      height: double.infinity,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [Colors.blue, Colors.green], // Change these colors as desired
-        ),
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.black12, Colors.orangeAccent],
+          ),
       ),
           child:  Padding(
         padding: const EdgeInsets.all(16.0),
