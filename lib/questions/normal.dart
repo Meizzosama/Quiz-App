@@ -170,7 +170,7 @@ class _NormalQuizScreenState extends State<NormalQuizScreen> {
                         child: Row(
                           children: [
                             Text(
-                              optionLabels[optionIndex], // Display option label (A, B, C)
+                              optionLabels[optionIndex],
                               style: const TextStyle(
                                 fontSize: 16,
                               ),

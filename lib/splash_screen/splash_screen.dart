@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
       });
     });
 
-    // After the animation, navigate to the HomeScreen
+
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const HomeScreen()));
     });
@@ -41,7 +41,6 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Image.asset('assets/splash.png'),
             ),
             const SizedBox(height: 20),
-            // ... (your text elements)
           ],
         ),
       ),

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
 class QuizQuestion {
   final String question;
   final List<String> options;
   final int correctAnswer;
-
   QuizQuestion({
     required this.question,
     required this.options,
@@ -37,36 +35,29 @@ final List<QuizQuestion> dummyQuestions = [
     options: ['1986', '1979', '1991'],
     correctAnswer: 0,
   ),
-
 ];
-
 class HardQuizScreen extends StatefulWidget {
   const HardQuizScreen({super.key});
 
   @override
   _HardQuizScreenState createState() => _HardQuizScreenState();
 }
-
 class _HardQuizScreenState extends State<HardQuizScreen> {
   int currentQuestionIndex = 0;
   int userScore = 0;
-
   final List<String> optionLabels = ['A', 'B', 'C'];
   int selectedOptionIndex = -1;
-
   List<String> remarks = [
     'Perfect! You got all questions correct!',
     'Well done! You did a great job!',
     'Keep practicing. You can do better!',
   ];
-
   void showRemarks() {
     int remarksIndex = userScore == dummyQuestions.length
         ? 0
         : userScore >= (dummyQuestions.length ~/ 2)
         ? 1
         : 2;
-
     showDialog(
       context: context,
       builder: (context) {
@@ -91,11 +82,9 @@ class _HardQuizScreenState extends State<HardQuizScreen> {
       },
     );
   }
-
   @override
   Widget build(BuildContext context) {
     final currentQuestion = dummyQuestions[currentQuestionIndex];
-
     return Scaffold(
         appBar: AppBar(
           title: const Text('Hard Quiz'),
@@ -133,7 +122,6 @@ class _HardQuizScreenState extends State<HardQuizScreen> {
                   ),
                 ),
                 const SizedBox(height: 16),
-
                 Column(
                   children: currentQuestion.options.asMap().entries.map((entry) {
                     final optionIndex = entry.key;
@@ -142,12 +130,9 @@ class _HardQuizScreenState extends State<HardQuizScreen> {
 
                     return InkWell(
                       onTap: () {
-
                         setState(() {
                           selectedOptionIndex = optionIndex;
                           userScore = isCorrectAnswer ? userScore + 1 : userScore;
-
-
                           if (currentQuestionIndex < dummyQuestions.length - 1) {
                             currentQuestionIndex++;
                             selectedOptionIndex = -1;
@@ -170,7 +155,7 @@ class _HardQuizScreenState extends State<HardQuizScreen> {
                         child: Row(
                           children: [
                             Text(
-                              optionLabels[optionIndex], // Display option label (A, B, C)
+                              optionLabels[optionIndex],
                               style: const TextStyle(
                                 fontSize: 16,
                               ),
