@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.of(context).push(
                     PageRouteBuilder(
                       pageBuilder: (context, animation, secondaryAnimation) {
-                        return const MediumQuizScreen();
+                        return const NormalQuizScreen();
                       },
                       transitionsBuilder: (context, animation, secondaryAnimation, child) {
                         const begin = Offset(0.0, 0.1);

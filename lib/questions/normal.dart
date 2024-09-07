@@ -67,14 +67,14 @@ final List<QuizQuestion> mediumLevelQuestions = [
   ),
 ];
 
-class MediumQuizScreen extends StatefulWidget {
-  const MediumQuizScreen({super.key});
+class NormalQuizScreen extends StatefulWidget {
+  const NormalQuizScreen({super.key});
 
   @override
-  _MediumQuizScreenState createState() => _MediumQuizScreenState();
+  _NormalQuizScreenState createState() => _NormalQuizScreenState();
 }
 
-class _MediumQuizScreenState extends State<MediumQuizScreen> {
+class _NormalQuizScreenState extends State<NormalQuizScreen> {
   int currentQuestionIndex = 0;
   int userScore = 0;
 
@@ -138,7 +138,7 @@ class _MediumQuizScreenState extends State<MediumQuizScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Medium Quiz'),
+        title: const Text('Normal Quiz'),
         backgroundColor: Colors.blueGrey,
         centerTitle: true,
       ),
